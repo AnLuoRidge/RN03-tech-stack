@@ -4,13 +4,16 @@ import { createStore } from 'redux'
 import { Text, View } from 'react-native';
 import reducers from './src/reducers'
 import {Header} from "./src/components/common";
+import LibraryList from './src/components/LibraryList'
+
+
 export default class App extends React.Component {
   render() {
-    // console.log(this.state.libraries)
     return (
       <Provider store={createStore(reducers)}>
         <View>
           <Header>Tech Stack</Header>
+          <LibraryList />
         </View>
       </Provider>
     );
