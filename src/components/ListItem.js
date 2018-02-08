@@ -32,7 +32,7 @@ class ListItem extends Component {
 
     if (this.props.isExpanded) { // passed-in id === id in reducer
       return (
-        <Text style={{flex:1}}>{description}</Text>
+        <Text style={styles.descriptionStyle}>{description}</Text>
       )
     }
   }
@@ -43,6 +43,11 @@ const styles = {
   titleStyle: {
     fontSize: 18,
     paddingLeft: 15
+  },
+  descriptionStyle: {
+    flex: 1,
+    paddingLeft: 15,
+    paddingRight:15
   }
 }
 
