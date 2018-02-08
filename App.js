@@ -11,7 +11,7 @@ export default class App extends React.Component {
   render() {
     return (
       <Provider store={createStore(reducers)}>
-        <View>
+        <View style={styles.containerStyle}>
           <Header>Tech Stack</Header>
           <LibraryList />
         </View>
@@ -21,10 +21,10 @@ export default class App extends React.Component {
 }
 
 const styles = {
-  container: {
+  containerStyle: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    // backgroundColor: '#fff',
+    // alignItems: 'center',
+    // justifyContent: 'center',
   },
 };
