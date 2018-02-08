@@ -19,14 +19,20 @@ class LibraryList extends Component {
     )
   }
 
+  highlightRow (sectionID, rowID) {
+    console.log("selected: "+ sectionID + rowID)
+  }
+
 render () {
   return <ListView dataSource={this.dataSource}
-  renderRow={this.renderRow} /> // todo: renderRow(lib???)
+  renderRow={this.renderRow} // todo: renderRow(lib???)
+  highlightRow={this.highlightRow} />
 }
 }
 
 // get global state and parse it into props
 const mapStateToProps = state => {
+  // App.js -> Provide store
   // in reducer.js libraries: LibraryReducer // key-value -> this.state
   return { libraries: state.libraries }
 }
